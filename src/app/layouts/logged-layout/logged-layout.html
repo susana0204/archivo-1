@@ -1,0 +1,19 @@
+<div>
+    <nav>
+
+        <input type="search" placeholder="search">
+        <div id="opciones">
+            <div>
+                <img src="svgviewer-output.svg" alt="contact" width="30" height="30">
+                <a routerLink="/contact">Contacto</a>
+            </div>
+            <div>
+                <img src="svgviewer-output (1).svg" alt="grupos" width="30" height="30">
+                <a routerLink="/grupos">Grupos</a>
+            </div>
+
+        </div>
+         <button (click)="authService.logout()">Log out</button>
+    </nav>
+</div>
+<router-outlet />

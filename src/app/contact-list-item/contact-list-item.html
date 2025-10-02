@@ -1,0 +1,12 @@
+<li class="categoria" [class.favourite]="contact().isFavorite === true">
+    <span>{{contact().firstName}} {{contact().lastName}}</span>
+    <span>{{contact().number}}</span>
+    <span>{{contact().email}}</span>
+    <span>-</span>
+    <span>
+        <a [routerLink]="['/contacts',contact().id,'edit']">Editar</a>
+        @if (contact().isFavorite === true) {
+            ⭐
+        }
+    </span>
+</li>

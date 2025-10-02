@@ -1,0 +1,36 @@
+div{
+    background-color: rgb(133, 183, 249);
+    font-size: large;
+    padding: 10px;
+    
+
+
+}
+
+ nav{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+ }
+
+div input{
+   border: 0;
+    border-radius: 20px;
+    padding: 25px;
+
+}
+
+#opciones{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+
+.a{
+    text-decoration: none;
+}
+

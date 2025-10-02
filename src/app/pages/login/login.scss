@@ -1,0 +1,29 @@
+
+@use "./../../../../public/styles/forms-pages.scss";
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+button:hover {
+  background-color: #6cacf0;
+}
+
+.error{
+    color: red;
+    color: var(--color-error);}
+

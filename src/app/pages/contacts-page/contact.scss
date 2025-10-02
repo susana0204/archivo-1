@@ -1,0 +1,43 @@
+@use "./../../../../public/styles/forms-pages.scss";
+
+.error {
+    color: red;
+    color: var(--color-error);
+}
+
+#container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+   
+}
+
+.card {
+    background-color: #f5d7a1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.add-button{
+background-color: rgb(98, 164, 230);
+color: aliceblue;
+padding: 10px 20px;
+border-radius: 20px;
+border: none;
+cursor: pointer;
+text-align: center;
+display: flex;
+justify-content: center;
+}
+
+#categoria{
+    display: flex;
+    gap: 20px;
+    background-color: rgb(126, 152, 232);
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
