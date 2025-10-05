@@ -1,36 +1,52 @@
-div{
+div {
     background-color: rgb(133, 183, 249);
     font-size: large;
     padding: 10px;
-    
+    display: flex;
+justify-content: space-between;
 
 
 }
 
- nav{
-    justify-content: flex-start;
+nav {
+
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+   
     align-items: center;
-
- }
-
-div input{
-   border: 0;
-    border-radius: 20px;
-    padding: 25px;
+    gap: 850px;
 
 }
 
-#opciones{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+
+div input {
+    border: 0;
+    border-radius: 20px;
+    padding: 18px;
+
+}
+button{
+    border-radius: 20px;
+    border: 0px;
+    background-color: seashell;
+    padding: 13px;
     
 }
 
-.a{
-    text-decoration: none;
+#opciones {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}

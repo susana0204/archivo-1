@@ -1,3 +1,6 @@
+
+<div class="contact-details">
+
 @if(cargandoContacto){
   <p>Cargando contacto...</p>
 } @else if(!contacto) {
@@ -12,8 +15,10 @@
 } @else {
   <button (click)="toggleFavorite()">Marcar como favorito</button>
 }
-  <p>
+  <div class="buttons">
     <a [routerLink]="['/contacts',idContacto(),'edit']">Editar</a>
-  </p>
+  
   <button (click)="deleteContact()">Eliminar</button>
+  </div>
 }
+</div>
