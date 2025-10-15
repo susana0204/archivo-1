@@ -35,9 +35,26 @@ justify-content: center;
 #categoria{
     display: flex;
     gap: 20px;
-    background-color: rgb(126, 152, 232);
+    background-color: rgb(92, 140, 244);
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
+}
+.contact.page{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    background-color: #f5d7a1;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px ;
+    transition: transform 0.2s;
 }

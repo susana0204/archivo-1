@@ -8,7 +8,6 @@ import { Grupos } from './pages/grupos/grupos';
 import { onlyLoggedUserGuard } from './guards/only-logged-user-guard';
 import { onlyPublicGuardGuard } from './guards/only-public-user-guard';
 import { Addcontact } from './pages/addcontact/addcontact';
-import { Delatecontact } from './pages/delatecontact/delatecontact';
 
 export const routes: Routes = [
     {

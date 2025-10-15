@@ -1,4 +1,5 @@
-  <div class="categoria">
+<div class="contact-page">
+<div class="categoria card">
   <span>Nombre</span>
   <span>Telefono</span>
   <span>Email</span>
@@ -9,7 +10,9 @@
   @for (contactoIndividual of contactsService.contacts; track $index) {
     <a [routerLink]="['/contacts',contactoIndividual.id]">
       <app-contact-list-item [contact]="contactoIndividual"></app-contact-list-item>
+
     </a>
   }
  </ul>
  <a routerLink="/contacts/new" class="add-button">+</a>
+</div>

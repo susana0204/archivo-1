@@ -17,8 +17,12 @@
       <p class="error">Debe colocar una contraseña de al menos 4 caracteres.</p>
       }
     </div>
-    <button [disabled]="isLoading || loginForm.invalid">Iniciar sesión</button>
 
+
+    <button [disabled]="isLoading || loginForm.invalid">Iniciar sesión</button>
+    @if(isLoading){
+    <app-spinner></app-spinner>
+    }
     @if (errorLogin) {
     <p class="error">Datos de sesión incorrectos, intente nuevamente.</p>
     }

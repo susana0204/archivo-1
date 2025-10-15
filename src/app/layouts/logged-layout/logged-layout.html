@@ -5,7 +5,7 @@
             <div id="opciones">
 
                 <div>
-                    <a routerLink="/contact"><img src="svgviewer-output.svg" alt="contact" width="30"
+                    <a routerLink="/"><img src="svgviewer-output.svg" alt="contact" width="30"
                             height="30">Contacto</a>
                 </div>
 
@@ -15,9 +15,9 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button (click)="authService.logout()">Log out</button>
-        </div>
+        
+            <div><button (click)="openLogoutModal()">Log out</button></div>
+           
     </nav>
 </div>
 <router-outlet />

@@ -10,7 +10,7 @@ import { ContactsService } from '../../services/contact-service';
   styleUrl: './contact-details.scss'
 })
 export class ContactDetails implements OnInit {
-   idContacto = input.required<string>();
+  idContacto = input.required<string>();
   readonly contactService = inject(ContactsService);
   contacto: Contact | undefined;
   cargandoContacto = false;
@@ -22,6 +22,7 @@ export class ContactDetails implements OnInit {
       if(!this.contacto) this.cargandoContacto = true;
       const res = await this.contactService.getContactById(this.idContacto());
       if(res) this.contacto = res;
+      console.log(res)
       this.cargandoContacto = false;
     }
   }

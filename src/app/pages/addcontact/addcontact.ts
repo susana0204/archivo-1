@@ -1,26 +1,26 @@
 import { Component, input, OnInit, viewChild } from '@angular/core';
 import { Contact, NewContact } from '../../interfaces/contact';
 import { FormsModule, NgForm } from '@angular/forms';
-import { AuthService } from '../../services/auth-service';
 import { ContactsService } from '../../services/contact-service';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { Spinner } from '../../spinner/spinner';
 
 @Component({
   selector: 'app-addcontact',
-  imports: [FormsModule],
+  imports: [FormsModule , Spinner],
   templateUrl: './addcontact.html',
   styleUrl: './addcontact.scss'
 })
 export class Addcontact implements OnInit {
-  authService = inject(AuthService);
+  router = inject(Router);
   contactsService = inject(ContactsService);
   errorEnBack = false;
   idContact = input<number>();
   contactOrignal: Contact | undefined = undefined
   form = viewChild<NgForm>('newContactForm');
-  router = inject(Router);
-
+  isloading=false;
+  
   async ngOnInit() {
     if (this.idContact()) {
       this.contactOrignal = await this.contactsService.getContactById(this.idContact()!);
@@ -49,19 +49,20 @@ export class Addcontact implements OnInit {
       isFavorite: form.value.isFavorite
     }
 
-    let res: Contact | undefined;
-    if (this.idContact()) {
-      res = await this.contactsService.editContact({ ...nuevoContacto, id: this.idContact()!})
+      let res;
+   
+    this.isloading = true;
+    if(this.idContact()){
+      res = await this.contactsService.editContact({...nuevoContacto,id:this.idContact()!})
     } else {
       res = await this.contactsService.createContact(nuevoContacto);
     }
-
-    if (!res) {
+    this.isloading = false;
+    if(!res) {
       this.errorEnBack = true;
       return
     };
-
-    this.router.navigate(["/contacts", res.id]);
+    this.router.navigate(["/contacts",res.id]);
   }
 
 }
